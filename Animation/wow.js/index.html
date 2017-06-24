@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>WOW.js演示_dowebok</title>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+<!-- data-wow-delay（动画延迟时间）
+data-wow-duration（动画持续时间） 
+data-wow-offset:距离开始动画(距离浏览器底部)  
+data-wow-iteration （动画持续次数）-->
+        <!-- flipOutY flipIntY  以什么为旋转轴  In动画进入 Out动画消失 -->
+		<!-- fadeInUp  渐变的效果  In动画进入 Out动画消失 Up动画从下往上 加入Big之后没有淡入 渐变的效果 -->
+		<!-- slideInDown  滑动的效果  In动画进入 Out动画消失  Down 设置方向  -->
+		<!-- bounceInUp  跳.反弹.弹跳.上下晃动 Up设置动画方向;-->
+        <!-- rotate  旋转 -->
+        <!-- rotateInDownLeft  以做左下角为旋转轴 顺时针旋转-->
+        <!-- rotateInUpLeft 以做左上角为旋转轴 逆时针旋转 -->
+        <!-- lightSpeedIn 类不倒翁的效果-->
+        <!-- hinge 像落叶效果 动画消失 -->
+        <!-- rollIn 滚动的效果 -->
+<h1>WOW.js - 让页面滚动更有趣</h1>
+<p class="txt">WOW.js 能让页面滚动时显示动画，使页面更有趣。</p>
+<div class="dowebok">
+	<div class="row">
+		<div class="wow rollIn bg-blue"></div>
+		<div class="wow bounceInDown bg-green">WOW.js</div>
+		<div class="wow lightSpeedIn bg-purple"></div>
+	</div>
+
+	<div class="row">
+		<div class="wow rollIn bg-yellow" data-wow-delay="0.5s">简单易用</div>
+		<div class="wow pulse bg-red" data-wow-iteration="1" data-wow-duration="0.15s"></div>
+		<div class="wow bounceInRight bg-blue">轻量级</div>
+	</div>
+
+	<div class="row">
+		<div class="wow bounceInLeft bg-green"></div>
+		<div class="wow flipInX bg-purple">WOW.js</div>
+		<div class="wow bounceInRight bg-yellow"></div>
+	</div>
+	<div class="row">
+		<div class="wow rollIn bg-blue">无需 jQuery</div>
+		<div class="wow shake bg-red" data-wow-iteration="2" data-wow-duration="0.15s"></div>
+		<div class="wow rollIn bg-purple" data-wow-iteration="1" data-wow-duration="2s" data-wow-offset="10">测试</div>
+	</div>
+
+	<div class="row">
+		<div class="wow rollIn bg-red"></div>
+		<div class="wow bounceInU bg-yellow" data-wow-delay="0.5s">WOW.js</div>
+		<div class="wow lightSpeedIn bg-green" data-wow-delay="0.5s" data-wow-duration="0.15s"></div>
+	</div>
+
+	<div class="row">
+		<div class="wow bounceInLeft bg-purple">依赖 animate.css</div>
+		<div class="wow pulse bg-blue" data-wow-iteration="5" data-wow-duration="0.25s"></div>
+		<div class="wow lightSpeedIn bg-yellow">多种动画</div>
+	</div>
+
+	<div class="row">
+		<div class="wow bounce bg-green" data-wow-iteration="5" data-wow-duration="0.15s"></div>
+		<div class="wow bounceInUp bg-red">WOW.js</div>
+		<div class="wow bounceInRight bg-purple"></div>
+	</div>
+
+	<div class="row">
+		<div class="wow rollIn bg-red" data-wow-delay="0.5s">无需 jQuery！？</div>
+		<div class="wow bounceInDown bg-green" data-wow-delay="1s"></div>
+		<div class="wow bounceInRight bg-yellow" data-wow-delay="1.5s">谢谢</div>
+	</div>
+</div>
+<div id="demo" class="animated"></div>
+<p class="btns"><button>shake</button><button>flash</button><button>swing</button><button>bounce</button><button>tada</button><button>wobble</button><button>pulse</button></p>
+<p class="btns"><button>flip</button><button>flipInX</button><button>flipOutX</button><button>flipInY</button><button>flipOutY</button></p>
+<p class="btns"><button>fadeIn</button><button>fadeInUp</button><button>fadeInDown</button><button>fadeInLeft</button><button>fadeInRight</button><button>fadeInUpBig</button><button>fadeInDownBig</button><button>fadeInLeftBig</button><button>fadeInRightBig</button></p>
+<p class="btns"><button>fadeOut</button><button>fadeOutUp</button><button>fadeOutDown</button><button>fadeOutLeft</button><button>fadeOutRight</button><button>fadeOutUpBig</button><button>fadeOutDownBig</button><button>fadeOutLeftBig</button><button>fadeOutRightBig</button></p>
+<p class="btns"><button>slideInDown</button><button>slideInLeft</button><button>slideInRight</button><button>slideOutUp</button><button>slideOutLeft</button><button>slideOutRight</button></p>
+<p class="btns"><button>bounceIn</button><button>bounceInDown</button><button>bounceInUp</button><button>bounceInLeft</button><button>bounceInRight</button></p>
+<p class="btns"><button>bounceOut</button><button>bounceOutDown</button><button>bounceOutUp</button><button>bounceOutLeft</button><button>bounceOutRight</button></p>
+<p class="btns"><button>rotateIn</button><button>rotateInDownLeft</button><button>rotateInDownRight</button><button>rotateInUpLeft</button><button>rotateInUpRight</button></p>
+<p class="btns"><button>rotateOut</button><button>rotateOutDownLeft</button><button>rotateOutDownRight</button><button>rotateOutUpLeft</button><button>rotateOutUpRight</button></p>
+<p class="btns"><button>lightSpeedIn</button><button>lightSpeedOut</button><button>hinge</button><button>rollIn</button><button>rollOut</button></p>
+<p>
+<script type="text/javascript">
+// 给每一个按钮添加点击事件 并让它显示该效果
+$('button').click(function(){
+		var className = $(this).text();
+		$('#demo').addClass(className);
+		setTimeout(function(){
+			$('#demo').removeClass(className);						
+		},1000);
+	})
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+// 正则表达式，navigator.userAgent浏览器信息是否含有MSIE字样，就是判断是否为IE浏览器。
+</script>
+</body>
+</html>
